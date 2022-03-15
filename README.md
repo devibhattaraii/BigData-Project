@@ -32,3 +32,61 @@ kafka-console-producer --broker-list localhost:9092 --topic WebLogs
 ### Data source
 
 * https://www.kaggle.com/shawon10/web-log-dataset
+
+
+
+
+Firstly, clone the repo to your machine by running following command:
+
+```bash
+git clone https://github.com/devibhattaraii/RCT-Dev-Deployment.git
+```
+
+## Installation of packages
+Install dependencies following this link. https://www.tecmint.com/install-apache-spark-on-ubuntu/
+Exception: Spark: 3.2.1, Scala: 2.12.15
+
+
+## Running the Project
+
+In order start the project, we will need Kafka server. 
+In one terminal, run docker-compose and shift to another terminal.
+```bash
+sudo docker-compose up
+```
+
+## starting the Spark Server
+In another terminal, start the spark sever using following command:
+```bash
+# starts the spark server
+make logs
+
+```
+
+## sending Logs
+In another terminal, using following command, send the logs:
+
+```bash
+make send-logs
+```
+To visit the Kafdrop UI, visit [http://localhost:8000](http://localhost:8000)
+
+After this, we can see the changes in total number of logs in Kafka via Kafdrop UI under topic: WEBLOGS.
+
+![Kafdrop-UI](https://github.com/devibhattaraii/RCT-Dev-Deployment/blob/b44ed2f0b8718913c5f4f5650503d92ce109acdc/Sound.png)
+
+Then, the messages we just pushed to Kafka is shoown as below:
+![messages](https://github.com/devibhattaraii/RCT-Dev-Deployment/blob/b44ed2f0b8718913c5f4f5650503d92ce109acdc/Sound.png)
+
+## Watching analytics
+In another terminal after closing "make logs", using following command, we can view analytics:
+
+```bash
+make log-analytics
+```
+After this, we can see the log via analytics run on Hive table data via sql.
+
+![analytics](https://github.com/devibhattaraii/RCT-Dev-Deployment/blob/b44ed2f0b8718913c5f4f5650503d92ce109acdc/Sound.png)
+
+## Working Demo in Fedora 35(workstation)
+This UI screenshot is taken in Fedora 35 (workstation).
