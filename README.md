@@ -76,7 +76,7 @@ After this, we can see the changes in total number of logs in Kafka via Kafdrop 
 ![Kafdrop-UI](https://github.com/devibhattaraii/BigData-Project/blob/0798ff4d215cb61adf6b3598f800b38eb0961169/Kafdrop-UI.png)
 
 Then, the messages we just pushed to Kafka is shoown as below:
-![messages](https://github.com/devibhattaraii/RCT-Dev-Deployment/blob/b44ed2f0b8718913c5f4f5650503d92ce109acdc/Sound.png)
+![messages](https://github.com/devibhattaraii/BigData-Project/blob/0798ff4d215cb61adf6b3598f800b38eb0961169/viewMessages.png)
 
 ## Watching analytics
 In another terminal after closing "make logs", using following command, we can view analytics:
@@ -86,7 +86,7 @@ make log-analytics
 ```
 After this, we can see the log via analytics run on Hive table data via sql.
 
-![analytics](https://github.com/devibhattaraii/BigData-Project/blob/0798ff4d215cb61adf6b3598f800b38eb0961169/viewMessages.png)
+![analytics](https://github.com/devibhattaraii/BigData-Project/blob/48e76e13a6f9b4d3df8b562be180bc4fe72f5b78/analytic.png)
 
 ## Working Demo in Fedora 35(workstation)
 This UI screenshot is taken in Fedora 35 (workstation).
